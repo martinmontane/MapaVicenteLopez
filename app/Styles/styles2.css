@@ -1,0 +1,28 @@
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.skin-blue .main-header .logo {
+  width:100%;
+  background-color: #93af37;
+}
+
+.skin-blue .main-header .logo:hover {
+  width:100%;
+  background-color: #fff;
+  color:#93af37;
+}
+
+
+.skin-blue .main-header .navbar {
+  background-color: #93af37;
+  display:none;
+}
+
+.leaflet-pane .leaflet-tooltip-pane {
+  font-size:16 !important;
+}
