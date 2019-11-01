@@ -1,13 +1,17 @@
-createPopups <- function(data,addWhatsapp =TRUE,nombre,tematica,direccion,contactoTel,contactoMail,captionWhatsapp) {
-  # data$geometry <- NULL
-  # data <- data.frame(lapply(data, function(x) unicodeConversion(x)),stringsAsFactors = FALSE)
-  # captionWhatsapp <- unicodeConversion(captionWhatsapp)
-  # direccion <- unicodeConversion(direccion)
+createPopups <- function(data,
+                         addWhatsapp =TRUE,
+                         nombre,
+                         tematica,
+                         direccion,
+                         contactoTel,
+                         contactoMail,
+                         captionWhatsapp,
+                         descripcion) {
   inicioPopup <- "<div class='leaflet-popup-scrolled' style='height:50vh'>"
   nombrePopup <- paste("<b><h3>",data[[nombre]],"</h3></b>", sep='')
-  tematicaPopup <- paste("<b>Tem\u00e1tica:</b>",data[[tematica]], sep='')
-  queHacemosPopup <- "<h4>\u00bfQu\u00e9 hacemos?</h4> \u00bfPODRIAMOS CONTAR CON UNA MINI BIO DE QU\u00e9 ES LO QUE HACEN?<br>"
-  contactoPopup <- "<h4>\u00bfC\u00f3mo pod\u00e9s contactarte?:</h4>"
+  tematicaPopup <- paste("<b>Temática:</b>",data[[tematica]], sep='')
+  queHacemosPopup <- ifelse(is.na(descripcion),'',paste("<h4>¿Qué hacemos?</h4>",descripcion))
+  contactoPopup <- "<h4>¿Cómo podés contactarte?:</h4>"
   contactoTelefonoPopup <- paste("<i class='fa fa-phone' aria-hidden='true'></i>",data[[contactoTel]], sep = "")
   contactoMailPopup <- paste("<i class='fa fa-envelope-open' aria-hidden='true'></i>",data[[contactoMail]], sep ="")
   direccionPopup <- paste("<i class='fas fa-map-marker-alt' aria-hidden='true'></i>",direccion, sep ="")
@@ -27,8 +31,4 @@ if(addWhatsapp & !is.null(direccion) & !is.null(captionWhatsapp)) {
 }
   popups <- paste(popups,finalPopup,sep="")
   return(popups)
-}
-
-createIcons <- function(iconLibrary=NULL,iconName=NULL,markerColor=NULL,iconColor=NULL) {
-  
 }
