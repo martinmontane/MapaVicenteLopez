@@ -4,7 +4,7 @@ require(shinydashboard)
 ## @auth: Martin Montane ##
 ###########################
 ui <- dashboardPage(
-  dashboardHeader(title = paste0("Mapa interactivo de OSC (",nrow(datos),')')),
+  dashboardHeader(title = "Prueba"),
   dashboardSidebar(disable=TRUE),
   dashboardBody(print("Hola Mundo")
   )
