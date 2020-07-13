@@ -23,7 +23,7 @@
   # Descricipcion: Breve párrafo sobre las actividades que realiza
   # lon: longitud de la coordenada donde se ubica (WGS84)
   # lat: latitud de la coordenada donde se ubica (WGS84)
-  datos <- fread('http://vicentelopezdevo.cloudapi.junar.com/api/v2/datastreams/TEST-ENTID/data.csv/?auth_key=f20f529b8190a209f7d8da7987344ce8a5676c7a',
+  datos <- fread('http://vicentelopez.cloudapi.junar.com/api/v2/datastreams/ENTID/data.csv/?auth_key=Zemmwb1TiGf1MD9q9O0Y4aBEugpJxecUKGZbfnzL',
                  encoding = 'UTF-8')
   # Si existen oboservaciones que están vacías, pero son textos, hay que
   # convertirlo
